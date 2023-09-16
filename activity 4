@@ -1,0 +1,42 @@
+
+   # Initialize an empty dictionary to store data
+record_dict = {}
+
+# Function to add data to the dictionary
+def add_data():
+    key = input("Enter Key: ")
+    value = input("Enter Value: ")
+    record_dict[key] = value
+    print("Data added successfully.")
+
+# Function to delete data from the dictionary
+def delete_data():
+    key = input("Enter Key to delete: ")
+    if key in record_dict:
+        del record_dict[key]
+        print("Data deleted successfully.")
+    else:
+        print("Key not found.")
+
+# Main application loop
+while True:
+    print("\nChoose an option:")
+    print("a. Add Data")
+    print("b. Delete Data")
+    print("c. End")
+
+    choice = input("Enter your choice: ")
+
+    if choice == 'a':
+        add_data()
+    elif choice == 'b':
+        delete_data()
+    elif choice == 'c':
+        print("THANK YOU")
+        break
+    else:
+        print("Invalid choice. Please select a valid option.")
+    
+    print("\nCurrent Record:")
+    for key, value in record_dict.items():
+        print(f"{key}: {value}")
