@@ -1,0 +1,16 @@
+Name = input ( "Name:" )
+Science = input ( "Science:")
+Math = input ( " Math:" )
+English = input (" English: ")
+total = float (Science) * float (Math) * float (English)
+Average = float(total) / 300 * 100
+print (" Name " , Name)
+print (" Science " , Science)
+print (" Math " , Math)
+print (" English ", English)
+print (Average)
+
+if Average < 75:
+   print ("you Failed!")
+if Average > 75:
+   print ( "congratulations! you passed" )
